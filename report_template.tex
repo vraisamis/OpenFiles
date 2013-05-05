@@ -1,0 +1,138 @@
+\documentclass[a4j,10pt]{jsarticle}
+
+%grapic
+\usepackage{graphicx}
+
+%sorce code
+\usepackage{listings,jlisting}
+%非標準パッケージ。エラー出るならコメントアウト。
+%以下のようにする。
+%\begin{lstlisting}[caption=キャプション,label=aaa]
+%	コード...
+%\end{lstlisting}   ←直書きする場合。
+%\lstinputlisting[caption=キャプション,label=zzz]{filename}   ←ファイルから取り込む場合。
+
+%listings, jlisting settings
+%7行目をコメントアウトするなら、46行目までコメントアウトする。
+\lstset{
+	language=C,
+	numbers=left,
+	stepnumber=1,
+	numbersep=1zw,
+	numberblanklines=true,
+	framexleftmargin=25pt,
+	xleftmargin=25pt,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true,
+	breakautoindent=true,
+	emptylines=3,
+	frame=tblr,
+	tab=\textasciicircum\hspace{\fill},
+	showtabs=true,
+	tabsize=4,
+	showspaces=false,
+	lineskip=-0.5ex,
+	numberstyle=\scriptsize,
+	basicstyle=\tt\small,
+	identifierstyle=\small,
+	stringstyle=\tt,
+	commentstyle=\small\itshape,
+	keywordstyle=\small\bfseries,
+	ndkeywordstyle=\scriptsize
+}
+%listingの図番号は通せなかった。
+%代わりに「ファイル 1  キャプション」のように出力する。
+\renewcommand{\lstlistingname}{ファイル}
+
+%コマンド
+%図
+%\afigure{横幅}{ファイル名}{キャプション}{ラベル}
+\newcommand{\afigure}[4][12cm]{
+	\begin{center}
+		\begin{figure}[htbp]
+			\includegraphics[#1]{#2}
+			\caption{#3}
+			\label{#4}
+		\end{figure}
+	\end{center}
+}
+
+%使用器具
+%\begin{aitems}{機種 or ソフトウェア}{ラベル}
+%\aline{パソコン}{B60D}{ブランド}{自宅}
+%\end{aitems}
+\newenvironment{aitems}[2][器具]
+{\{begin{center} \caption{使用#1}
+\label{#2}
+\begin{tabular}[l|lcl]
+\hline
+#1名 & 規格 & 製造会社 & その他 \\
+\hline}
+{\hline\end{tablar}\end{center}}
+\newcommand{\aline}[4]{#1 & #2 & #3 & #4 \\}
+
+%セクション＆ラベル
+\newcommand{\mysection}[2]{\section{#1}\label{#2}}
+\newcommand{\mysubsection}[2]{\subsection{#1}\label{#2}}
+\newcommand{\mysubsubsection}[2]{\subsubsection{#1}\label{#2}}
+
+%本文の開始
+\begin{document}
+
+\begin{abstract}
+ここに概要を書く。両脇が空くのは\LaTeX 側の仕様なので、気になるようならば、\verb|\section*{概要}|
+のように書く。
+\end{abstract}
+
+
+%1ページを概要で埋めるのが前提のようなので、目的の直前で改ページしている。
+\newpage
+\mysection{目的}{sec:purpose}
+
+ここに目的を書く。
+
+
+\mysection{原理}{sec:theory}
+
+ここに原理を書く。文献は\cite{アイテム}を参照。
+
+
+\mysubsection{入れ子の原理}{sec:theory:ireko}
+
+入れ子にする場合はこのようにする。
+
+\lstinputlisting[caption=ふぁふぁ,label=src]{gaus.c}
+
+\mysection{実験方法}{sec:way}
+
+ここに実験方法を書く。
+
+
+%以下はプレレポートには必要ないのでコメントアウトしてある。適宜外すこと。
+%\mysection{使用器具}{sec:item}
+%
+%今回の実験に使用した器具を、表\ref{tab:item}に示す。
+
+%\begin{aitems}{器具}{tab:item}
+%	\aline{}{}{}{}
+%\end{aitems}
+%
+%
+%\mysection{実験結果}{sec:result}
+%
+%ここに実験結果を書く。
+%
+%
+%\mysection{考察}{sec:study}
+%
+%ここに考察を書く。
+%
+%
+%参考文献
+% \cite{key}  ←を、参考文献を参照したい箇所に置く。
+\begin{thebibliography}{9}
+\bibitem{アイテム} ここに書籍情報を書く
+\end{thebibliography}
+%
+\end{document}
