@@ -1,7 +1,8 @@
 \documentclass[a4j,10pt]{jsarticle}
 
+\usepackage{booktabs}
 %grapic
-\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 
 %sorce code
 \usepackage{listings,jlisting}
@@ -62,14 +63,21 @@
 %\begin{aitems}{機種 or ソフトウェア}{ラベル}
 %\aline{パソコン}{B60D}{ブランド}{自宅}
 %\end{aitems}
-\newenvironment{aitems}[2][器具]
-{\{begin{center} \caption{使用#1}
-\label{#2}
-\begin{tabular}[l|lcl]
-\hline
-#1名 & 規格 & 製造会社 & その他 \\
-\hline}
-{\hline\end{tablar}\end{center}}
+\newenvironment{aitems}[2]{%
+\begin{table}[htbp]
+	\begin{center}
+		\caption{使用#1}
+		\label{#2}
+		\begin{tabular}{l|l|c|l}
+			\hline
+			#1名 & 規格 & 製造会社 & その他 \\
+			\hline
+}{%
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+}
 \newcommand{\aline}[4]{#1 & #2 & #3 & #4 \\}
 
 %セクション＆ラベル
@@ -77,11 +85,44 @@
 \newcommand{\mysubsection}[2]{\subsection{#1}\label{#2}}
 \newcommand{\mysubsubsection}[2]{\subsubsection{#1}\label{#2}}
 
+%sonota
+%marusuji
+\newcommand{\MARU}[1]{{\ooalign{\hfil#1\/\hfil\crcr
+	\raise.167ex\hbox{\mathhexbox20D}}}}
+%baikaku dash
+\def\――{―\kern-.5zw―\kern-.5zw―}
+%thrash on Moji (in Math mode)
+\newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr$#1$}}}
+%gr(le) and eq
+\makeatletter
+\newcommand{\LEQQ}{\mathrel{\mathpalette\gl@align<}}
+\newcommand{\GEQQ}{\mathrel{\mathpalette\gl@align>}}
+\newcommand{\gl@align}[2]{\lower.6ex\vbox{\baselineskip\z@skip
+	\lineskip\z@
+	\ialign{$\m@th#1\hfil##\hfil$\crcr#2\crcr=\crcr}}}
+\makeatother
+%one line frac
+\newcommand{\FRAC}[2]{\leavevmode\kern.1em
+	\raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
+	/\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
+%数値羅列表環境(center + tabular環境の代替)
+% \phantom{何々}で「何々」分の空白が入る。\rlap{何々}で、一部分だけ文字末尾にを足すこともできる(アスタリスクを一カ所だけ付加などに使う)。
+\makeatletter
+\newenvironment{arraytabular}[1]{%
+	\begin{center}
+		\begin{tabular}{#1}
+}{%
+		\end{tabular}
+	\end{center}
+}
+\makeatother
+
+
 %本文の開始
 \begin{document}
 
 \begin{abstract}
-ここに概要を書く。両脇が空くのは\LaTeX 側の仕様なので、気になるようならば、\verb|\section*{概要}|
+$\FRAC{2}{5}$ここに概要を書く。両脇が空くのは\LaTeX 側の仕様なので、気になるようならば、\verb|\section*{概要}|
 のように書く。
 \end{abstract}
 
@@ -95,14 +136,13 @@
 
 \mysection{原理}{sec:theory}
 
-ここに原理を書く。文献は\cite{アイテム}を参照。
+ここに原理を書く。文献は参考文献の節を参照\cite{アイテム}。複数文献を参照するときは、このようにする\cite{アイテム,新}。ページ番号も挿入する場合は、こうする\cite[pp.9--44]{新}。
 
 
 \mysubsection{入れ子の原理}{sec:theory:ireko}
 
 入れ子にする場合はこのようにする。
 
-\lstinputlisting[caption=ふぁふぁ,label=src]{gaus.c}
 
 \mysection{実験方法}{sec:way}
 
@@ -110,13 +150,30 @@
 
 
 %以下はプレレポートには必要ないのでコメントアウトしてある。適宜外すこと。
-%\mysection{使用器具}{sec:item}
+\mysection{使用器具}{sec:item}
 %
-%今回の実験に使用した器具を、表\ref{tab:item}に示す。
+今回の実験に使用した器具を、表\ref{tab:item}に示す。
 
-%\begin{aitems}{器具}{tab:item}
-%	\aline{}{}{}{}
-%\end{aitems}
+\begin{aitems}{器具}{tab:item}
+	\aline{パソコン}{メモリは100TBぐらいです!}{まいくろそふと}{嘘です}
+	\aline{実験回路}{$R_a=100\mathrm{\Omega}$}{\――}{学校製}
+\end{aitems}
+
+\begin{table}[htbp]
+	\caption{afafa}
+	\label{afae}
+	\begin{arraytabular}{rl}
+		%一列目は右寄せなので、右側につめもの。
+		%二列目は左寄せなので、左側に。
+		%\xxrule 命令はbooktabsパッケージのものなので、エラー出たら全部\hline に置換してください。
+		                                   \toprule
+		R & P                           \\ \midrule
+		1.5\phantom{0} & 3.14\phantom{00} \\
+		2.25           & 3.1415           \\
+		2.42\rlap{*}   & 3.1\phantom{000} \\ \bottomrule
+		%出力の小数点位置がそろっているはず。
+	\end{arraytabular}
+\end{table}
 %
 %
 %\mysection{実験結果}{sec:result}
@@ -131,8 +188,23 @@
 %
 %参考文献
 % \cite{key}  ←を、参考文献を参照したい箇所に置く。
-\begin{thebibliography}{9}
+\begin{thebibliography}{New99}
 \bibitem{アイテム} ここに書籍情報を書く
+\bibitem[New]{新} 括弧内も変更可能。
+%キャプションを変えるとずれるみたい。汚いから変えない方が無難。そのときは{New99}を{99}にする。
 \end{thebibliography}
+
+
+%%tipes
+%\begin{figure}[htbp] %here,top,bottom,page. 図の希望位置
+%	\centering %figure環境の中ではcenter環境よりこちらがいいらしい。
+%	\includegraphics[width=10cm]{kairo.eps}
+%	\caption{kairo test}
+%	\label{mykairo}
+%\end{figure}
 %
+%\renewcommand{\figurename}{Fig.} %図のキャプション装飾を変えたいとき。
+%
+%相互参照を適用するには、二度のコンパイルが必要。
+
 \end{document}
