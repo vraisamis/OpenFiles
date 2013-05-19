@@ -6,15 +6,15 @@
 
 %sorce code
 \usepackage{listings,jlisting}
-%”ñ•W€ƒpƒbƒP[ƒWBƒGƒ‰[o‚é‚È‚çƒRƒƒ“ƒgƒAƒEƒgB
-%ˆÈ‰º‚Ì‚æ‚¤‚É‚·‚éB
-%\begin{lstlisting}[caption=ƒLƒƒƒvƒVƒ‡ƒ“,label=aaa]
-%	ƒR[ƒh...
-%\end{lstlisting}   ©’¼‘‚«‚·‚éê‡B
-%\lstinputlisting[caption=ƒLƒƒƒvƒVƒ‡ƒ“,label=zzz]{filename}   ©ƒtƒ@ƒCƒ‹‚©‚çæ‚è‚Şê‡B
+%éæ¨™æº–ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã€‚ã‚¨ãƒ©ãƒ¼å‡ºã‚‹ãªã‚‰ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã€‚
+%ä»¥ä¸‹ã®ã‚ˆã†ã«ã™ã‚‹ã€‚
+%\begin{lstlisting}[caption=ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³,label=aaa]
+%	ã‚³ãƒ¼ãƒ‰...
+%\end{lstlisting}   â†ç›´æ›¸ãã™ã‚‹å ´åˆã€‚
+%\lstinputlisting[caption=ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³,label=zzz]{filename}   â†ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰å–ã‚Šè¾¼ã‚€å ´åˆã€‚
 
 %listings, jlisting settings
-%7s–Ú‚ğƒRƒƒ“ƒgƒAƒEƒg‚·‚é‚È‚çA46s–Ú‚Ü‚ÅƒRƒƒ“ƒgƒAƒEƒg‚·‚éB
+%7è¡Œç›®ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ãªã‚‰ã€46è¡Œç›®ã¾ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã€‚
 \lstset{
 	language=C,
 	numbers=left,
@@ -42,13 +42,13 @@
 	keywordstyle=\small\bfseries,
 	ndkeywordstyle=\scriptsize
 }
-%listing‚Ì}”Ô†‚Í’Ê‚¹‚È‚©‚Á‚½B
-%‘ã‚í‚è‚Éuƒtƒ@ƒCƒ‹ 1  ƒLƒƒƒvƒVƒ‡ƒ“v‚Ì‚æ‚¤‚Éo—Í‚·‚éB
-\renewcommand{\lstlistingname}{ƒtƒ@ƒCƒ‹}
+%listingã®å›³ç•ªå·ã¯é€šã›ãªã‹ã£ãŸã€‚
+%ä»£ã‚ã‚Šã«ã€Œãƒ•ã‚¡ã‚¤ãƒ« 1  ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã€ã®ã‚ˆã†ã«å‡ºåŠ›ã™ã‚‹ã€‚
+\renewcommand{\lstlistingname}{ãƒ•ã‚¡ã‚¤ãƒ«}
 
-%ƒRƒ}ƒ“ƒh
-%}
-%\afigure{‰¡•}{ƒtƒ@ƒCƒ‹–¼}{ƒLƒƒƒvƒVƒ‡ƒ“}{ƒ‰ƒxƒ‹}
+%ã‚³ãƒãƒ³ãƒ‰
+%å›³
+%\afigure{æ¨ªå¹…}{ãƒ•ã‚¡ã‚¤ãƒ«å}{ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³}{ãƒ©ãƒ™ãƒ«}
 \newcommand{\afigure}[4][12cm]{
 	\begin{center}
 		\begin{figure}[htbp]
@@ -59,18 +59,18 @@
 	\end{center}
 }
 
-%g—pŠí‹ï
-%\begin{aitems}{‹@í or ƒ\ƒtƒgƒEƒFƒA}{ƒ‰ƒxƒ‹}
-%\aline{ƒpƒ\ƒRƒ“}{B60D}{ƒuƒ‰ƒ“ƒh}{©‘î}
+%ä½¿ç”¨å™¨å…·
+%\begin{aitems}{æ©Ÿç¨® or ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢}{ãƒ©ãƒ™ãƒ«}
+%\aline{ãƒ‘ã‚½ã‚³ãƒ³}{B60D}{ãƒ–ãƒ©ãƒ³ãƒ‰}{è‡ªå®…}
 %\end{aitems}
 \newenvironment{aitems}[2]{%
 \begin{table}[htbp]
 	\begin{center}
-		\caption{g—p#1}
+		\caption{ä½¿ç”¨#1}
 		\label{#2}
 		\begin{tabular}{l|l|c|l}
 			\hline
-			#1–¼ & ‹KŠi & »‘¢‰ïĞ & ‚»‚Ì‘¼ \\
+			#1å & è¦æ ¼ & è£½é€ ä¼šç¤¾ & ãã®ä»– \\
 			\hline
 }{%
 			\hline
@@ -80,20 +80,20 @@
 }
 \newcommand{\aline}[4]{#1 & #2 & #3 & #4 \\}
 
-%ƒZƒNƒVƒ‡ƒ“•ƒ‰ƒxƒ‹
+%ã‚»ã‚¯ã‚·ãƒ§ãƒ³ï¼†ãƒ©ãƒ™ãƒ«
 \newcommand{\mysection}[2]{\section{#1}\label{#2}}
 \newcommand{\mysubsection}[2]{\subsection{#1}\label{#2}}
 \newcommand{\mysubsubsection}[2]{\subsubsection{#1}\label{#2}}
 
-%sonota
-%marusuji
+%ãã®ä»–ãƒã‚¯ãƒ­
+%ä¸¸æ•°å­—
 \newcommand{\MARU}[1]{{\ooalign{\hfil#1\/\hfil\crcr
 	\raise.167ex\hbox{\mathhexbox20D}}}}
-%baikaku dash
-\def\\\{\\kern-.5zw\\kern-.5zw\}
-%thrash on Moji (in Math mode)
+%å€è§’ãƒ€ãƒƒã‚·ãƒ¥
+\def\â€•â€•{â€•\kern-.5zwâ€•\kern-.5zwâ€•}
+%æ–œç·šæ–‡å­—(æ•°å¼ãƒ¢ãƒ¼ãƒ‰)
 \newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr$#1$}}}
-%gr(le) and eq
+%å¤§ãªã‚Šãƒ»å°ãªã‚Šã‚¤ã‚³ãƒ¼ãƒ«
 \makeatletter
 \newcommand{\LEQQ}{\mathrel{\mathpalette\gl@align<}}
 \newcommand{\GEQQ}{\mathrel{\mathpalette\gl@align>}}
@@ -101,12 +101,12 @@
 	\lineskip\z@
 	\ialign{$\m@th#1\hfil##\hfil$\crcr#2\crcr=\crcr}}}
 \makeatother
-%one line frac
+%ä¸€è¡Œåˆ†æ•°
 \newcommand{\FRAC}[2]{\leavevmode\kern.1em
 	\raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
 	/\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
-%”’l—…—ñ•\ŠÂ‹«(center + tabularŠÂ‹«‚Ì‘ã‘Ö)
-% \phantom{‰½X}‚Åu‰½Xv•ª‚Ì‹ó”’‚ª“ü‚éB\rlap{‰½X}‚ÅAˆê•”•ª‚¾‚¯•¶š––”ö‚É‚ğ‘«‚·‚±‚Æ‚à‚Å‚«‚é(ƒAƒXƒ^ƒŠƒXƒN‚ğˆêƒJŠ‚¾‚¯•t‰Á‚È‚Ç‚Ég‚¤)B
+%æ•°å€¤ç¾…åˆ—è¡¨ç’°å¢ƒ(center + tabularç’°å¢ƒã®ä»£æ›¿)
+% \phantom{ä½•ã€…}ã§ã€Œä½•ã€…ã€åˆ†ã®ç©ºç™½ãŒå…¥ã‚‹ã€‚\rlap{ä½•ã€…}ã§ã€ä¸€éƒ¨åˆ†ã ã‘æ–‡å­—æœ«å°¾ã«ã‚’è¶³ã™ã“ã¨ã‚‚ã§ãã‚‹(ã‚¢ã‚¹ã‚¿ãƒªã‚¹ã‚¯ã‚’ä¸€ã‚«æ‰€ã ã‘ä»˜åŠ ãªã©ã«ä½¿ã†)ã€‚
 \makeatletter
 \newenvironment{arraytabular}[1]{%
 	\begin{center}
@@ -116,97 +116,103 @@
 	\end{center}
 }
 \makeatother
-%’PˆÊ‹L†‚ğƒ[ƒ}ƒ“‘Ì‚É‚µ‚½A’PˆÊ•t‚«”’l
+%å˜ä½è¨˜å·ã‚’ãƒ­ãƒ¼ãƒãƒ³ä½“ã«ã—ãŸã€å˜ä½ä»˜ãæ•°å€¤
 \newcommand{\myvalue}[2]{$#1[\mathrm{#2}]$}
 
 
-%–{•¶‚ÌŠJn
+%ãƒšãƒ¼ã‚¸ç•ªå·ã«é–¢ã™ã‚‹è¨­å®š
+\pagestyle{myheadings}
+\newif\ifpre
+%ãƒ—ãƒ¬ãƒ¬ãƒãƒ¼ãƒˆã®æ™‚ã¯\pretrueã€æœ¬ãƒ¬ãƒãƒ¼ãƒˆã§ã¯\prefalse
+\pretrue
+
+%æœ¬æ–‡ã®é–‹å§‹
 \begin{document}
-
+\markboth{}{}
+\ifpre\addtocounter{page}{1}\else
 \begin{abstract}
-$\FRAC{2}{5}$‚±‚±‚ÉŠT—v‚ğ‘‚­B—¼˜e‚ª‹ó‚­‚Ì‚Í\LaTeX ‘¤‚Ìd—l‚È‚Ì‚ÅA‹C‚É‚È‚é‚æ‚¤‚È‚ç‚ÎA\verb|\section*{ŠT—v}|
-‚Ì‚æ‚¤‚É‘‚­B
+\setlength{\baselineskip}{1.75zw}
+$\FRAC{2}{5}$ã“ã“ã«æ¦‚è¦ã‚’æ›¸ãã€‚ä¸¡è„‡ãŒç©ºãã®ã¯\LaTeX å´ã®ä»•æ§˜ãªã®ã§ã€æ°—ã«ãªã‚‹ã‚ˆã†ãªã‚‰ã°ã€\verb|\section*{æ¦‚è¦}|
+ã®ã‚ˆã†ã«æ›¸ãã€‚
 \end{abstract}
-
-
-%1ƒy[ƒW‚ğŠT—v‚Å–„‚ß‚é‚Ì‚ª‘O’ñ‚Ì‚æ‚¤‚È‚Ì‚ÅA–Ú“I‚Ì’¼‘O‚Å‰üƒy[ƒW‚µ‚Ä‚¢‚éB
 \newpage
-\mysection{–Ú“I}{sec:purpose}
+\fi
+\mysection{ç›®çš„}{sec:purpose}
 
-‚±‚±‚É–Ú“I‚ğ‘‚­B
-
-
-\mysection{Œ´—}{sec:theory}
-
-‚±‚±‚ÉŒ´—‚ğ‘‚­B•¶Œ£‚ÍQl•¶Œ£‚Ìß‚ğQÆ\cite{ƒAƒCƒeƒ€}B•¡”•¶Œ£‚ğQÆ‚·‚é‚Æ‚«‚ÍA‚±‚Ì‚æ‚¤‚É‚·‚é\cite{ƒAƒCƒeƒ€,V}Bƒy[ƒW”Ô†‚à‘}“ü‚·‚éê‡‚ÍA‚±‚¤‚·‚é\cite[pp.9--44]{V}B
+ã“ã“ã«ç›®çš„ã‚’æ›¸ãã€‚
 
 
-\mysubsection{“ü‚êq‚ÌŒ´—}{sec:theory:ireko}
+\mysection{åŸç†}{sec:theory}
 
-“ü‚êq‚É‚·‚éê‡‚Í‚±‚Ì‚æ‚¤‚É‚·‚éB
-
-
-\mysection{ÀŒ±•û–@}{sec:way}
-
-‚±‚±‚ÉÀŒ±•û–@‚ğ‘‚­B
+ã“ã“ã«åŸç†ã‚’æ›¸ãã€‚æ–‡çŒ®ã¯å‚è€ƒæ–‡çŒ®ã®ç¯€ã‚’å‚ç…§\cite{ã‚¢ã‚¤ãƒ†ãƒ }ã€‚è¤‡æ•°æ–‡çŒ®ã‚’å‚ç…§ã™ã‚‹ã¨ãã¯ã€ã“ã®ã‚ˆã†ã«ã™ã‚‹\cite{ã‚¢ã‚¤ãƒ†ãƒ ,æ–°}ã€‚ãƒšãƒ¼ã‚¸ç•ªå·ã‚‚æŒ¿å…¥ã™ã‚‹å ´åˆã¯ã€ã“ã†ã™ã‚‹\cite[pp.9--44]{æ–°}ã€‚
 
 
-%ˆÈ‰º‚ÍƒvƒŒƒŒƒ|[ƒg‚É‚Í•K—v‚È‚¢‚Ì‚ÅƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚ ‚éB“K‹XŠO‚·‚±‚ÆB
-\mysection{g—pŠí‹ï}{sec:item}
+\mysubsection{å…¥ã‚Œå­ã®åŸç†}{sec:theory:ireko}
+
+å…¥ã‚Œå­ã«ã™ã‚‹å ´åˆã¯ã“ã®ã‚ˆã†ã«ã™ã‚‹ã€‚
+
+
+\mysection{å®Ÿé¨“æ–¹æ³•}{sec:way}
+
+ã“ã“ã«å®Ÿé¨“æ–¹æ³•ã‚’æ›¸ãã€‚
+
+
+%ä»¥ä¸‹ã¯ãƒ—ãƒ¬ãƒ¬ãƒãƒ¼ãƒˆã«ã¯å¿…è¦ãªã„ã®ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ã‚ã‚‹ã€‚é©å®œå¤–ã™ã“ã¨ã€‚
+\ifpre\else
+\mysection{ä½¿ç”¨å™¨å…·}{sec:item}
 %
-¡‰ñ‚ÌÀŒ±‚Ég—p‚µ‚½Ší‹ï‚ğA•\\ref{tab:item}‚É¦‚·B
+ä»Šå›ã®å®Ÿé¨“ã«ä½¿ç”¨ã—ãŸå™¨å…·ã‚’ã€è¡¨\ref{tab:item}ã«ç¤ºã™ã€‚
 
-\begin{aitems}{Ší‹ï}{tab:item}
-	\aline{ƒpƒ\ƒRƒ“}{ƒƒ‚ƒŠ‚Í100TB‚®‚ç‚¢‚Å‚·!}{‚Ü‚¢‚­‚ë‚»‚Ó‚Æ}{‰R‚Å‚·}
-	\aline{ÀŒ±‰ñ˜H}{$R_a=100\mathrm{\Omega}$}{\\\}{ŠwZ»}
+\begin{aitems}{å™¨å…·}{tab:item}
+	\aline{ãƒ‘ã‚½ã‚³ãƒ³}{ãƒ¡ãƒ¢ãƒªã¯100TBãã‚‰ã„ã§ã™!}{ã¾ã„ãã‚ããµã¨}{å˜˜ã§ã™}
+	\aline{å®Ÿé¨“å›è·¯}{$R_a=100\mathrm{\Omega}$}{\â€•â€•}{å­¦æ ¡è£½}
 \end{aitems}
 
 \begin{table}[htbp]
 	\caption{afafa}
 	\label{afae}
 	\begin{arraytabular}{rl}
-		%ˆê—ñ–Ú‚Í‰EŠñ‚¹‚È‚Ì‚ÅA‰E‘¤‚É‚Â‚ß‚à‚ÌB
-		%“ñ—ñ–Ú‚Í¶Šñ‚¹‚È‚Ì‚ÅA¶‘¤‚ÉB
-		%\xxrule –½—ß‚ÍbooktabsƒpƒbƒP[ƒW‚Ì‚à‚Ì‚È‚Ì‚ÅAƒGƒ‰[o‚½‚ç‘S•”\hline ‚É’uŠ·‚µ‚Ä‚­‚¾‚³‚¢B
+		%ä¸€åˆ—ç›®ã¯å³å¯„ã›ãªã®ã§ã€å³å´ã«ã¤ã‚ã‚‚ã®ã€‚
+		%äºŒåˆ—ç›®ã¯å·¦å¯„ã›ãªã®ã§ã€å·¦å´ã«ã€‚
+		%\xxrule å‘½ä»¤ã¯booktabsãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã®ã‚‚ã®ãªã®ã§ã€ã‚¨ãƒ©ãƒ¼å‡ºãŸã‚‰å…¨éƒ¨\hline ã«ç½®æ›ã—ã¦ãã ã•ã„ã€‚
 		                                   \toprule
 		R & P                           \\ \midrule
 		1.5\phantom{0} & 3.14\phantom{00} \\
 		2.25           & 3.1415           \\
 		2.42\rlap{*}   & 3.1\phantom{000} \\ \bottomrule
-		%o—Í‚Ì¬”“_ˆÊ’u‚ª‚»‚ë‚Á‚Ä‚¢‚é‚Í‚¸B
+		%å‡ºåŠ›ã®å°æ•°ç‚¹ä½ç½®ãŒãã‚ã£ã¦ã„ã‚‹ã¯ãšã€‚
 	\end{arraytabular}
 \end{table}
-%
-%
-%\mysection{ÀŒ±Œ‹‰Ê}{sec:result}
-%
-%‚±‚±‚ÉÀŒ±Œ‹‰Ê‚ğ‘‚­B
-%
-%
-%\mysection{l@}{sec:study}
-%
-%‚±‚±‚Él@‚ğ‘‚­B
-%
-%
-%Ql•¶Œ£
-% \cite{key}  ©‚ğAQl•¶Œ£‚ğQÆ‚µ‚½‚¢‰ÓŠ‚É’u‚­B
+
+
+\mysection{å®Ÿé¨“çµæœ}{sec:result}
+
+ã“ã“ã«å®Ÿé¨“çµæœã‚’æ›¸ãã€‚
+
+
+\mysection{è€ƒå¯Ÿ}{sec:study}
+
+ã“ã“ã«è€ƒå¯Ÿã‚’æ›¸ãã€‚
+
+
+%å‚è€ƒæ–‡çŒ®
+% \cite{key}  â†ã‚’ã€å‚è€ƒæ–‡çŒ®ã‚’å‚ç…§ã—ãŸã„ç®‡æ‰€ã«ç½®ãã€‚
 \begin{thebibliography}{New99}
-\bibitem{ƒAƒCƒeƒ€} ‚±‚±‚É‘Ğî•ñ‚ğ‘‚­
-\bibitem[New]{V} Š‡ŒÊ“à‚à•ÏX‰Â”\B
-%ƒLƒƒƒvƒVƒ‡ƒ“‚ğ•Ï‚¦‚é‚Æ‚¸‚ê‚é‚İ‚½‚¢B‰˜‚¢‚©‚ç•Ï‚¦‚È‚¢•û‚ª–³“ïB‚»‚Ì‚Æ‚«‚Í{New99}‚ğ{99}‚É‚·‚éB
+\bibitem{ã‚¢ã‚¤ãƒ†ãƒ } ã“ã“ã«æ›¸ç±æƒ…å ±ã‚’æ›¸ã
+\bibitem[New]{æ–°} æ‹¬å¼§å†…ã‚‚å¤‰æ›´å¯èƒ½ã€‚
+%ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã‚’å¤‰ãˆã‚‹ã¨ãšã‚Œã‚‹ã¿ãŸã„ã€‚æ±šã„ã‹ã‚‰å¤‰ãˆãªã„æ–¹ãŒç„¡é›£ã€‚ãã®ã¨ãã¯{New99}ã‚’{99}ã«ã™ã‚‹ã€‚
 \end{thebibliography}
 
-
+\fi
+\end{document}
 %%tipes
-%\begin{figure}[htbp] %here,top,bottom,page. }‚ÌŠó–]ˆÊ’u
-%	\centering %figureŠÂ‹«‚Ì’†‚Å‚ÍcenterŠÂ‹«‚æ‚è‚±‚¿‚ç‚ª‚¢‚¢‚ç‚µ‚¢B
+%\begin{figure}[htbp] %here,top,bottom,page. å›³ã®å¸Œæœ›ä½ç½®
+%	\centering %figureç’°å¢ƒã®ä¸­ã§ã¯centerç’°å¢ƒã‚ˆã‚Šã“ã¡ã‚‰ãŒã„ã„ã‚‰ã—ã„ã€‚
 %	\includegraphics[width=10cm]{kairo.eps}
 %	\caption{kairo test}
 %	\label{mykairo}
 %\end{figure}
 %
-%\renewcommand{\figurename}{Fig.} %}‚ÌƒLƒƒƒvƒVƒ‡ƒ“‘•ü‚ğ•Ï‚¦‚½‚¢‚Æ‚«B
+%\renewcommand{\figurename}{Fig.} %å›³ã®ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³è£…é£¾ã‚’å¤‰ãˆãŸã„ã¨ãã€‚
 %
-%‘ŠŒİQÆ‚ğ“K—p‚·‚é‚É‚ÍA“ñ“x‚ÌƒRƒ“ƒpƒCƒ‹‚ª•K—vB
-
-\end{document}
+%ç›¸äº’å‚ç…§ã‚’é©ç”¨ã™ã‚‹ã«ã¯ã€äºŒåº¦ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ãŒå¿…è¦ã€‚
