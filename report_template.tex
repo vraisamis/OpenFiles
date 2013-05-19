@@ -124,18 +124,20 @@
 \pagestyle{myheadings}
 \newif\ifpre
 %プレレポートの時は\pretrue、本レポートでは\prefalse
-\pretrue
+%\pretrue
 
 %本文の開始
 \begin{document}
 \markboth{}{}
-\ifpre\addtocounter{page}{1}\else
+\ifpre{1}\else
 \begin{abstract}
 \setlength{\baselineskip}{1.75zw}
+\thispagestyle{empty}
 $\FRAC{2}{5}$ここに概要を書く。両脇が空くのは\LaTeX 側の仕様なので、気になるようならば、\verb|\section*{概要}|
 のように書く。
 \end{abstract}
 \newpage
+\addtocounter{page}{-1}
 \fi
 \mysection{目的}{sec:purpose}
 
