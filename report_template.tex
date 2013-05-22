@@ -1,12 +1,9 @@
 \documentclass[a4j,10pt]{jsarticle}
 
 \usepackage{booktabs}
-%grapic
+\usepackage{amsmath,amssymb}
 \usepackage[dvipdfmx]{graphicx}
-
-%sorce code
 \usepackage{listings,jlisting}
-%非標準パッケージ。エラー出るならコメントアウト。
 %以下のようにする。
 %\begin{lstlisting}[caption=キャプション,label=aaa]
 %	コード...
@@ -14,7 +11,7 @@
 %\lstinputlisting[caption=キャプション,label=zzz]{filename}   ←ファイルから取り込む場合。
 
 %listings, jlisting settings
-%7行目をコメントアウトするなら、46行目までコメントアウトする。
+%7行目をコメントアウトするなら、\renewcommand{\lstlistingname}までコメントアウトする。
 \lstset{
 	language=C,
 	numbers=left,
@@ -23,7 +20,7 @@
 	numberblanklines=true,
 	framexleftmargin=25pt,
 	xleftmargin=25pt,
-	captionpos=b,
+	captionpos=t,
 	breaklines=true,
 	breakatwhitespace=true,
 	breakautoindent=true,
@@ -49,14 +46,13 @@
 %コマンド
 %図
 %\afigure{横幅}{ファイル名}{キャプション}{ラベル}
-\newcommand{\afigure}[4][12cm]{
-	\begin{center}
-		\begin{figure}[htbp]
-			\includegraphics[#1]{#2}
-			\caption{#3}
-			\label{#4}
-		\end{figure}
-	\end{center}
+\newcommand{\afigure}[4]{
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[#1]{#2}
+		\caption{#3}
+		\label{#4}
+	\end{figure}
 }
 
 %使用器具
@@ -105,17 +101,6 @@
 \newcommand{\FRAC}[2]{\leavevmode\kern.1em
 	\raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
 	/\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
-%数値羅列表環境(center + tabular環境の代替)
-% \phantom{何々}で「何々」分の空白が入る。\rlap{何々}で、一部分だけ文字末尾にを足すこともできる(アスタリスクを一カ所だけ付加などに使う)。
-\makeatletter
-\newenvironment{arraytabular}[1]{%
-	\begin{center}
-		\begin{tabular}{#1}
-}{%
-		\end{tabular}
-	\end{center}
-}
-\makeatother
 %単位記号をローマン体にした、単位付き数値
 \newcommand{\myvalue}[2]{$#1[\mathrm{#2}]$}
 
@@ -208,6 +193,7 @@ $\FRAC{2}{5}$ここに概要を書く。両脇が空くのは\LaTeX 側の仕様
 \fi
 \end{document}
 %%tipes
+% \phantom{何々}で「何々」分の空白が入る。\rlap{何々}で、一部分だけ文字末尾にを足すこともできる(アスタリスクを一カ所だけ付加などに使う)。
 %\begin{figure}[htbp] %here,top,bottom,page. 図の希望位置
 %	\centering %figure環境の中ではcenter環境よりこちらがいいらしい。
 %	\includegraphics[width=10cm]{kairo.eps}
