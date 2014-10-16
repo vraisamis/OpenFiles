@@ -1,3 +1,5 @@
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*}{\section}{}{}
 \newcommand{\Title}[2]{%
 \begin{center}
 	{\Huge\bf #1}\\\mbox{}\\
