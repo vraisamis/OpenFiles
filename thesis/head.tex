@@ -1,4 +1,6 @@
 \usepackage{etoolbox}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
 \patchcmd{\thebibliography}{\section*}{\section}{}{}
 \newcommand{\Title}[2]{%
 \begin{center}
@@ -8,3 +10,5 @@
 \vspace{1.5zw}\par
 }
 \setlength{\columnsep}{4zw}
+\newcommand{\myVector}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\strong}[1]{{\bf #1}}
