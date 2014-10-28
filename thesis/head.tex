@@ -1,7 +1,9 @@
 \usepackage{etoolbox}
 \usepackage{float}
 \usepackage{amsmath, amssymb}
-\patchcmd{\thebibliography}{\section*}{\section}{}{}
+% 参考文献に節番号を付加する
+%\patchcmd{\thebibliography}{\section*}{\section}{}{}
+% maketitleしないで自前のタイトル
 \newcommand{\Title}[2]{%
 \begin{center}
 	{\Huge\bf #1}\\\mbox{}\\
@@ -9,6 +11,16 @@
 \end{center}
 \vspace{1.5zw}\par
 }
+
+% マルチカラムの設定
 \setlength{\columnsep}{4zw}
+
+% 自前汎用命令たち
 \newcommand{\myVector}[1]{\mbox{\boldmath $#1$}}
 \newcommand{\strong}[1]{{\bf #1}}
+
+% ドキュメントの長さ
+\addtolength{\topmargin}{-6zw}
+\addtolength{\textheight}{9zw}
+%\addtolength{\oddsidemargin}{-1in}
+%\addtolength{\evensidemargin}{-1in}
